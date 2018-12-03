@@ -34,7 +34,7 @@ Slide With Plot
 library(dplyr)
 library(plotly)
 kd <- with(MyData, MASS::kde2d(Norm1, Norm2, n = round(5*log(nrow(MyData)))))
-p <- plot_ly(x = kd$x, y = kd$y, z = kd$z) %>% add_surface()
+p <- plot_ly(x = kd$x, y = kd$y, z = kd$z) %>% add_surface() %>% layout(autosize = F, width = 300, height = 300)
 htmlwidgets::saveWidget(as.widget(p), file = "plot.html") # necessary to get functionality in presentation
 ```
 <iframe src="plot.html" style="position:absolute;height:100%;width:100%"></iframe>
@@ -42,7 +42,7 @@ htmlwidgets::saveWidget(as.widget(p), file = "plot.html") # necessary to get fun
 Links
 ========================================================
 
-Below are the links to the App and the github repo for the entire project (including this presentation).  The app includes basic instructions but there really aren't any non-basic instructions.  The app is defaulted to certain parameters, and you change them as necessary to generate data from your desired bivariate normal distribution.  That is, you update how big of a sample you'd like, what the means and variances of the normal distributions to be, and what you want the correlation between the two normal distributions to be (and set a seed).  And that's it.
+Below are the links to the App and the github repo for the entire project (including this presentation).  The app includes basic instructions but there really aren't any non-basic instructions.  The app is defaulted to certain parameters, and you change them as necessary to generate data from your desired bivariate normal distribution.  That is, you update how big of a sample you'd like, what the means and variances of the normal distributions to be, and what you want the correlation between the two normal distributions to be (and set a seed).  And that's it. 
 
 * [App](https://shaynweidner.shinyapps.io/dataproductsfinalproject/)
 

@@ -30,12 +30,12 @@ head(MyData)
 
 ```
       Norm1    Norm2
-1 3.2331408 2.894973
-2 0.7207845 3.160595
-3 2.7650593 3.977687
-4 2.5302552 2.370965
-5 2.2295765 3.664905
-6 1.6312808 3.551411
+1 0.9109714 1.727377
+2 1.0767368 3.088125
+3 1.9349250 1.601887
+4 1.6127173 1.654543
+5 3.0207072 2.214232
+6 1.6987697 2.301118
 ```
 
 Slide With Plot
@@ -46,7 +46,7 @@ Slide With Plot
 library(dplyr)
 library(plotly)
 kd <- with(MyData, MASS::kde2d(Norm1, Norm2, n = round(5*log(nrow(MyData)))))
-p <- plot_ly(x = kd$x, y = kd$y, z = kd$z) %>% add_surface()
+p <- plot_ly(x = kd$x, y = kd$y, z = kd$z) %>% add_surface() %>% layout(autosize = F, width = 300, height = 300)
 htmlwidgets::saveWidget(as.widget(p), file = "plot.html") # necessary to get functionality in presentation
 ```
 <iframe src="plot.html" style="position:absolute;height:100%;width:100%"></iframe>
@@ -54,7 +54,7 @@ htmlwidgets::saveWidget(as.widget(p), file = "plot.html") # necessary to get fun
 Links
 ========================================================
 
-Below are the links to the App and the github repo for the entire project (including this presentation).  The app includes basic instructions but there really aren't any non-basic instructions.  The app is defaulted to certain parameters, and you change them as necessary to generate data from your desired bivariate normal distribution.  That is, you update how big of a sample you'd like, what the means and variances of the normal distributions to be, and what you want the correlation between the two normal distributions to be (and set a seed).  And that's it.
+Below are the links to the App and the github repo for the entire project (including this presentation).  The app includes basic instructions but there really aren't any non-basic instructions.  The app is defaulted to certain parameters, and you change them as necessary to generate data from your desired bivariate normal distribution.  That is, you update how big of a sample you'd like, what the means and variances of the normal distributions to be, and what you want the correlation between the two normal distributions to be (and set a seed).  And that's it. 
 
 * [App](https://shaynweidner.shinyapps.io/dataproductsfinalproject/)
 
