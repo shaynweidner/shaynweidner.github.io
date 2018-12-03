@@ -18,10 +18,8 @@ Multivariate Normal, via code
 
 ```{r}
 library(MASS)
-MyData <- as.data.frame(mvrnorm(n=1000 #sample size
-                 ,mu=c(2,3) #means
-                 ,Sigma = matrix(c(1,0,0,1) #cov matrix
-                                 ,nrow=2)
+set.seed(1234)
+MyData <- as.data.frame(mvrnorm(n=1000,mu=c(2,3),Sigma = matrix(c(1,0,0,1),nrow=2)
                  ))
 names(MyData)<-c("Norm1","Norm2")
 head(MyData)
