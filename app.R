@@ -77,7 +77,7 @@ ui <- fluidPage(
          )
        ,
        HTML(
-         "<h3>Basic Instructions</h3><h4>1.Adjust any inputs above from their default values, as necessary<br>2.Hit 'Submit'<br>Interactive plot will appear to the right, after processing has completed (you may need to hover your mouse over it before it shows)<br><br>For more information, go to the app pitch <a href='placeholder.html'>here</a></h4>"
+         "<h3>Basic Instructions</h3><h4>1.Adjust any inputs above from their default values, as necessary<br>2.Hit 'Submit'<br>Interactive plot will appear to the right, after processing has completed (you may need to hover your mouse over it before it shows)<br><br>For more information, go to the app pitch <a href='https://shaynweidner.github.io/Final_Product_Pitch.html'>here</a></h4>"
          )
       )),
       
