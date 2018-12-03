@@ -27,7 +27,7 @@ names(MyData)<-c("Norm1","Norm2")
 head(MyData)
 ```
 
-Slide With Plot
+Slide With Plot - it's interactive :) 
 ========================================================
 
 ```{r}
